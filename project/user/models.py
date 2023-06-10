@@ -6,3 +6,4 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     phoneNum = models.CharField(max_length=20)              # 핸드폰번호
+
