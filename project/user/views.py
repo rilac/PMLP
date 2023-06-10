@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate
 # Create your views here.
 
 def login(request):
+    # 이런 식으로 코딩하면 되겠다이지 여기에 맞추는 건 아닙니다.
     if request.method == 'POST':
         userid = request.POST.get('username')
         password = request.POST.get('password')
