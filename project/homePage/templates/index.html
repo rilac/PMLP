@@ -1,451 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
 <head>
-  <title>PMLP - Main </title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PMLP - Main </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/ dflaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!--  <link rel="stylesheet" href="fonts/icomoon/style.css">-->
+    <!--  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">-->
+    <!--  <link rel="stylesheet" href="css/jquery-ui.css">-->
+    <!--  <link rel="stylesheet" href="css/owl.carousel.min.css">-->
+    <!--  <link rel="stylesheet" href="css/owl.theme.default.min.css">-->
+    <!--  <link rel="stylesheet" href="css/owl.theme.default.min.css">-->
 
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <!--  <link rel="stylesheet" href="css/jquery.fancybox.min.css">-->
 
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <!--  <link rel="stylesheet" href="css/bootstrap-datepicker.css">-->
 
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <!--  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">-->
 
-  <link rel="stylesheet" href="css/aos.css">
+    <!--  <link rel="stylesheet" href="css/aos.css">-->
 
-  <link rel="stylesheet" href="css/style.css">
-
-
-
+    <!--  <link rel="stylesheet" href="css/style.css">-->
 </head>
 
 <body>
 
-  <div class="site-wrap">
+<div class="site-wrap">
 
     <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close">
-          <span class="icon-close2 js-menu-toggle"></span>
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
         </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
+        <div class="site-mobile-menu-body"></div>
     </div>
 
 
     <header class="site-navbar py-4" role="banner">
 
-      <div class="container">
-        <div class="d-flex align-items-center">
-          <div class="site-logo">
-            <a href="index.html">
-              <img src="images/edit/logo/MLB_Logo.svg" alt="Logo" id="logo_img">
-            </a>
-          </div>
-          <div class="ml-auto">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li class="active"><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="matches.html" class="nav-link">Matches</a></li>
-                <li><a href="virtualMatch.html" class="nav-link">Virtual Match</a></li>
-                <li><a href="board.html" class="nav-link">Board</a></li>
-                <!-- 로그인 안 된 경우 Sign in 버튼이 보이도록, 로그인 후 는 UserInfo 버튼으로 보이도록 설정  -->
-                <!-- {% if user.is_authenticated %} -->
-                <li><a href="user_info.html" class="nav-link">UserInfo</a></li>
-                <!-- {% else %} -->
-                <li><a href="login.html" class="nav-link">Sign in</a></li>
-                <!-- {% endif %} -->
-              </ul>
-            </nav>
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="site-logo">
+                    <a href="index.html">
+                        <img src="/static/images/edit/logo/MLB_Logo.svg" alt="Logo" id="logo_img">
+                    </a>
+                </div>
+                <div class="ml-auto">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+                        <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                            <li class="active"><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="matches.html" class="nav-link">Matches</a></li>
+                            <li><a href="virtualMatch.html" class="nav-link">Virtual Match</a></li>
+                            <li><a href="board.html" class="nav-link">Board</a></li>
+                            <!-- 로그인 안 된 경우 Sign in 버튼이 보이도록, 로그인 후 는 UserInfo 버튼으로 보이도록 설정  -->
+                            <!-- {% if user.is_authenticated %} -->
+                            <li><a href="user_info.html" class="nav-link">UserInfo</a></li>
+                            <!-- {% else %} -->
+                            <li><a href="login.html" class="nav-link">Sign in</a></li>
+                            <!-- {% endif %} -->
+                        </ul>
+                    </nav>
 
-            <a href="#"
-              class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right text-white"><span
-                class="icon-menu h3 text-white"></span></a>
-          </div>
+                    <a href="#"
+                       class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right text-white"><span
+                            class="icon-menu h3 text-white"></span></a>
+                </div>
+            </div>
         </div>
-      </div>
 
     </header>
 
-    <div class="hero overlay" style="background-image: url('images/edit/bg/stadium_bg.jpg');">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-5 ml-auto">
-            <h1 class="text-white"> LAD </h1>
-            <h2 class="text-white"> vs </h2>
-            <h1 class="text-white"> SF </h1>
-            <p> </p>
-            <!-- 회원가입 시 선택한 FavTeam 의 가장 최신 경기 남은 시간으로 바꾸기 -->
-            <!-- or 경기 일정 (일자) 띄워주기 -->
-            <div id="date-countdown"></div>
-            <p>
-              <a href="#" class="btn btn-primary py-3 px-4 mr-3"> Learn More </a>
-              <!-- 해당 경기의 상세 정보 (매치업 상대와 최근 10경기 상대전적 등 경기정보를 보여주는 페이지로 이동) -->
-              <!-- <a href="#" class="more light">Learn More</a> -->
-            </p>
-          </div>
+    <div class="hero overlay" style="background-image: url('/static/images/edit/bg/stadium_bg.jpg');">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 ml-auto">
+                    <h1 class="text-white"> LAD </h1>
+                    <h2 class="text-white"> vs </h2>
+                    <h1 class="text-white"> SF </h1>
+                    <p></p>
+                    <!-- 회원가입 시 선택한 FavTeam 의 가장 최신 경기 남은 시간으로 바꾸기 -->
+                    <!-- or 경기 일정 (일자) 띄워주기 -->
+                    <div id="date-countdown"></div>
+                    <p>
+                        <a href="#" class="btn btn-primary py-3 px-4 mr-3"> Learn More </a>
+                        <!-- 해당 경기의 상세 정보 (매치업 상대와 최근 10경기 상대전적 등 경기정보를 보여주는 페이지로 이동) -->
+                        <!-- <a href="#" class="more light">Learn More</a> -->
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-
 
 
     <div class="container">
 
 
-      <div class="row">
-        <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-12">
 
-          <div class="d-flex team-vs">
-            <span class="score">16-4</span>
-            <!-- 스코어 DB에서 불러오기 ㄱㄴ? -->
-            <div class="team-1 w-50">
-              <div class="team-details w-100 text-center">
-                <img src="images/edit/logo/Logo_LAD_1.svg" alt="Image" class="img-fluid" id="team-logo-mainPage">
-                <h3> LA Dodgers <span>(win)</span></h3>
-                <!-- TeamName / Win Lose 여부 필요함 -->
-                <ul class="list-unstyled">
-                  <!-- <li>Anja Landry (7)</li>
-                  <li>Eadie Salinas (12)</li>
-                  <li>Ashton Allen (10)</li>
-                  <li>Baxter Metcalfe (5)</li> -->
-                </ul>
-              </div>
+                <div class="d-flex team-vs">
+                    <span class="score">16-4</span>
+                    <!-- 스코어 DB에서 불러오기 ㄱㄴ? -->
+                    <div class="team-1 w-50">
+                        <div class="team-details w-100 text-center">
+                            <img src="/static/images/edit/logo/Logo_LAD_1.svg" alt="Image" class="img-fluid"
+                                 id="team-logo-mainPage">
+                            <h3> LA Dodgers <span>(win)</span></h3>
+                            <!-- TeamName / Win Lose 여부 필요함 -->
+                            <ul class="list-unstyled">
+                                <!-- <li>Anja Landry (7)</li>
+                                <li>Eadie Salinas (12)</li>
+                                <li>Ashton Allen (10)</li>
+                                <li>Baxter Metcalfe (5)</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-2 w-50">
+                        <div class="team-details w-100 text-center">
+                            <img src="images/edit/logo/Logo_SF_1.svg" alt="Image" class="img-fluid"
+                                 id="team-logo-mainPage">
+                            <h3> San Francisco Giants <span>(loss)</span></h3>
+                            <ul class="list-unstyled">
+                                <!-- <li>Macauly Green (3)</li>
+                                <li>Arham Stark (8)</li>
+                                <li>Stephan Murillo (9)</li>
+                                <li>Ned Ritter (5)</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="team-2 w-50">
-              <div class="team-details w-100 text-center">
-                <img src="images/edit/logo/Logo_SF_1.svg" alt="Image" class="img-fluid" id="team-logo-mainPage">
-                <h3> San Francisco Giants <span>(loss)</span></h3>
-                <ul class="list-unstyled">
-                  <!-- <li>Macauly Green (3)</li>
-                  <li>Arham Stark (8)</li>
-                  <li>Stephan Murillo (9)</li>
-                  <li>Ned Ritter (5)</li> -->
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
 
     <div class="latest-news">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 title-section">
-            <h2 class="heading"> Recent Post </h2>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <div class="post-entry">
-              <a href="#">
-                <img src="images/edit/etc/Karina.jpeg" alt="Image" class="img-fluid" id="card_recent_img">
-              </a>
-              <div class="caption">
-                <div class="caption-inner">
-                  <!-- 최근 게시물 제목 1 -->
-                  <h3 class="mb-3">카리나 왜 이렇게 이쁜가?</h3>
-                  <div class="author d-flex align-items-center">
-                    <div class="img mb-2 mr-3">
-                      <img src="images/edit/etc/profile/corgi2.jpg" alt="">
-                    </div>
-                    <div class="text">
-                      <!-- 작성자 User -->
-                      <h4>USER01</h4>
-                      <!-- 게시물 작성일 / 태그 -->
-                      <span>게시물 작성 일자 / 태그 (구현가능하면)</span>
-                    </div>
-                  </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 title-section">
+                    <h2 class="heading"> Recent Post </h2>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="post-entry">
-              <a href="#">
-                <img src="images/edit/etc/rip_lotte.jpeg" alt="Image" class="img-fluid" id="card_recent_img">
-              </a>
-              <div class="caption">
-                <div class="caption-inner">
-                  <h3 class="mb-3">롯데 4위로 추락해 문건우씨 충격 . . . </h3>
-                  <div class="author d-flex align-items-center">
-                    <div class="img mb-2 mr-3">
-                      <img src="images/edit/etc/profile/corgi3.jpg" alt="">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <div class="post-entry">
+                        <a href="#">
+                            <img src="images/edit/etc/Karina.jpeg" alt="Image" class="img-fluid" id="card_recent_img">
+                        </a>
+                        <div class="caption">
+                            <div class="caption-inner">
+                                <!-- 최근 게시물 제목 1 -->
+                                <h3 class="mb-3">카리나 왜 이렇게 이쁜가?</h3>
+                                <div class="author d-flex align-items-center">
+                                    <div class="img mb-2 mr-3">
+                                        <img src="images/edit/etc/profile/corgi2.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <!-- 작성자 User -->
+                                        <h4>USER01</h4>
+                                        <!-- 게시물 작성일 / 태그 -->
+                                        <span>게시물 작성 일자 / 태그 (구현가능하면)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text">
-                      <h4> USER02 </h4>
-                      <span>게시물 작성 일자 / 태그 (구현가능하면)</span>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="post-entry">
-              <a href="#">
-                <img src="images/img_2.jpg" alt="Image" class="img-fluid" id="card_recent_img">
-              </a>
-              <div class="caption">
-                <div class="caption-inner">
-                  <h3 class="mb-3">Dogba set for Juvendu return?</h3>
-                  <div class="author d-flex align-items-center">
-                    <div class="img mb-2 mr-3">
-                      <img src="images/edit/etc/profile/corgi.jpg" alt="">
+                <div class="col-md-4">
+                    <div class="post-entry">
+                        <a href="#">
+                            <img src="images/edit/etc/rip_lotte.jpeg" alt="Image" class="img-fluid"
+                                 id="card_recent_img">
+                        </a>
+                        <div class="caption">
+                            <div class="caption-inner">
+                                <h3 class="mb-3">롯데 4위로 추락해 문건우씨 충격 . . . </h3>
+                                <div class="author d-flex align-items-center">
+                                    <div class="img mb-2 mr-3">
+                                        <img src="images/edit/etc/profile/corgi3.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h4> USER02 </h4>
+                                        <span>게시물 작성 일자 / 태그 (구현가능하면)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text">
-                      <h4>USER03</h4>
-                      <span>게시물 작성 일자 / 태그 (구현가능하면)</span>
-                    </div>
-                  </div>
                 </div>
-              </div>
+                <div class="col-md-4">
+                    <div class="post-entry">
+                        <a href="#">
+                            <img src="images/img_2.jpg" alt="Image" class="img-fluid" id="card_recent_img">
+                        </a>
+                        <div class="caption">
+                            <div class="caption-inner">
+                                <h3 class="mb-3">Dogba set for Juvendu return?</h3>
+                                <div class="author d-flex align-items-center">
+                                    <div class="img mb-2 mr-3">
+                                        <img src="images/edit/etc/profile/corgi.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h4>USER03</h4>
+                                        <span>게시물 작성 일자 / 태그 (구현가능하면)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-      </div>
+        </div>
     </div>
 
     <div class="site-section bg-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="widget-next-match">
-              <div class="widget-title">
-                <h3>Next Match</h3>
-              </div>
-              <div class="widget-body mb-3" id="nextMatch">
-                <div class="widget-vs">
-                  <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
-                    <div class="team-1 text-center">
-                      <img src="images/edit/logo/Logo_LAD_1.svg" alt="Image" id="team-logo-mainPage">
-                      <h3>LAD</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="widget-next-match">
+                        <div class="widget-title">
+                            <h3>Next Match</h3>
+                        </div>
+                        <div class="widget-body mb-3" id="nextMatch">
+                            <div class="widget-vs">
+                                <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
+                                    <div class="team-1 text-center">
+                                        <img src="images/edit/logo/Logo_LAD_1.svg" alt="Image" id="team-logo-mainPage">
+                                        <h3>LAD</h3>
+                                    </div>
+                                    <div>
+                                        <span class="vs"><span>VS</span></span>
+                                    </div>
+                                    <div class="team-2 text-center">
+                                        <img src="images/edit/logo/Logo_SF_1.svg" alt="Image" id="team-logo-mainPage">
+                                        <h3>SF</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center widget-vs-contents mb-4">
+                            <h4>NL WEST</h4>
+                            <p class="mb-5">
+                                <!-- 경기일정 / 날짜, 시간 분리해서 각각 표시 -->
+                                <span class="d-block">December 20th, 2020</span>
+                                <span class="d-block">9:30 AM GMT+0</span>
+                                <!-- MLB 는 일반적으로 '오른쪽 팀'이 홈팀, 오른쪽 팀의 홈구장이 출력되도록 가져오기 -->
+                                <strong class="text-primary">Oracle Park</strong>
+                            </p>
+                            <!-- 솔직히 이거 남은시간 가져오는 로직을 전혀 모르겠음 나중에 같이 얘기 ㄱㄱ -->
+                            <!-- 이것도 구글검색하면 나오는 -->
+                            <!-- <div id="date-countdown2" class="pb-1"></div> -->
+                        </div>
                     </div>
-                    <div>
-                      <span class="vs"><span>VS</span></span>
-                    </div>
-                    <div class="team-2 text-center">
-                      <img src="images/edit/logo/Logo_SF_1.svg" alt="Image" id="team-logo-mainPage">
-                      <h3>SF</h3>
-                    </div>
-                  </div>
                 </div>
-              </div>
+                <div class="col-lg-6">
 
-              <div class="text-center widget-vs-contents mb-4">
-                <h4>NL WEST</h4>
-                <p class="mb-5">
-                  <!-- 경기일정 / 날짜, 시간 분리해서 각각 표시 -->
-                  <span class="d-block">December 20th, 2020</span>
-                  <span class="d-block">9:30 AM GMT+0</span>
-                  <!-- MLB 는 일반적으로 '오른쪽 팀'이 홈팀, 오른쪽 팀의 홈구장이 출력되도록 가져오기 -->
-                  <strong class="text-primary">Oracle Park</strong>
-                </p>
-                <!-- 솔직히 이거 남은시간 가져오는 로직을 전혀 모르겠음 나중에 같이 얘기 ㄱㄱ -->
-                <!-- 이것도 구글검색하면 나오는 -->
-                <!-- <div id="date-countdown2" class="pb-1"></div> -->
-              </div>
+                    <div class="widget-next-match">
+                        <table class="table custom-table">
+                            <thead>
+                            <tr id="leauge_name" style="background: blanchedalmond !important;">
+                                <th> NL WEST</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <th>P</th>
+                                <th>Team</th>
+                                <th>W</th>
+                                <th>L</th>
+                                <th>PT</th>
+                                <th>GB</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><strong class="text-white">LA Dodgers</strong></td>
+                                <td>22</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>140</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong class="text-white">San Francisco Giants</strong></td>
+                                <td>22</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>140</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong class="text-white">San Diego Padres</strong></td>
+                                <td>22</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>140</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong class="text-white">Colorado Rockies</strong></td>
+                                <td>22</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>140</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong class="text-white">Arizona Diamondbacks</strong></td>
+                                <td>22</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>140</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-
-            <div class="widget-next-match">
-              <table class="table custom-table">
-                <thead>
-                  <tr id="leauge_name" style="background: blanchedalmond !important;">
-                    <th> NL WEST </th>
-                    <th> </th>
-                    <th> </th>
-                    <th> </th>
-                    <th> </th>
-                    <th> </th>
-                  </tr>
-                </thead>
-                <!-- 장고 문법에 맞는 반복문으로 작성 미리 해둠 (맞는지 확인 좀 ) -->
-                <!-- <tbody>
-                  {% for i in range(1, 9) %}
-                    <tr>
-                      <td>{{ i }}</td>
-                      <td><strong class="text-white"> Team Name </strong></td>
-                      <td> WIN </td>
-                      <td> LOSE </td>
-                      <td> POINT </td>
-                      <td> GB </td>
-                    </tr>
-                  {% endfor %}
-                </tbody> -->
-                <tbody>
-                  <tr>
-                    <th>P</th>
-                    <th>Team</th>
-                    <th>W</th>
-                    <th>L</th>
-                    <th>PT</th>
-                    <th>GB</th>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td><strong class="text-white">LA Dodgers</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>140</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td><strong class="text-white">San Francisco Giants</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>140</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td><strong class="text-white">San Diego Padres</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>140</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td><strong class="text-white">Colorado Rockies</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>140</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td><strong class="text-white">Arizona Diamondbacks</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>140</td>
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
-
-
-
-          </div>
         </div>
-      </div>
     </div> <!-- .site-section -->
 
     <!-- 푸터 아직 작업 안함 -->
     <footer class="footer-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="widget mb-3">
-              <h3>News</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">All</a></li>
-                <li><a href="#">Club News</a></li>
-                <li><a href="#">Media Center</a></li>
-                <li><a href="#">Video</a></li>
-                <li><a href="#">RSS</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget mb-3">
-              <h3>Tickets</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Online Ticket</a></li>
-                <li><a href="#">Payment and Prices</a></li>
-                <li><a href="#">Contact &amp; Booking</a></li>
-                <li><a href="#">Tickets</a></li>
-                <li><a href="#">Coupon</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget mb-3">
-              <h3>Matches</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Standings</a></li>
-                <li><a href="#">World Cup</a></li>
-                <li><a href="#">La Lega</a></li>
-                <li><a href="#">Hyper Cup</a></li>
-                <li><a href="#">World League</a></li>
-              </ul>
-            </div>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="widget mb-3">
+                        <h3>News</h3>
+                        <ul class="list-unstyled links">
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Club News</a></li>
+                            <li><a href="#">Media Center</a></li>
+                            <li><a href="#">Video</a></li>
+                            <li><a href="#">RSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget mb-3">
+                        <h3>Tickets</h3>
+                        <ul class="list-unstyled links">
+                            <li><a href="#">Online Ticket</a></li>
+                            <li><a href="#">Payment and Prices</a></li>
+                            <li><a href="#">Contact &amp; Booking</a></li>
+                            <li><a href="#">Tickets</a></li>
+                            <li><a href="#">Coupon</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget mb-3">
+                        <h3>Matches</h3>
+                        <ul class="list-unstyled links">
+                            <li><a href="#">Standings</a></li>
+                            <li><a href="#">World Cup</a></li>
+                            <li><a href="#">La Lega</a></li>
+                            <li><a href="#">Hyper Cup</a></li>
+                            <li><a href="#">World League</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-          <div class="col-lg-3">
-            <div class="widget mb-3">
-              <h3>Social</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Youtube</a></li>
-              </ul>
-            </div>
-          </div>
+                <div class="col-lg-3">
+                    <div class="widget mb-3">
+                        <h3>Social</h3>
+                        <ul class="list-unstyled links">
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
 
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <div class=" pt-5">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            All rights reserved | This template is made with <i class="icon-heart"
+                                                                                aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="row text-center">
-          <div class="col-md-12">
-            <div class=" pt-5">
-              <p>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script> All rights reserved | This template is made with <i class="icon-heart"
-                  aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
     </footer>
 
 
+</div>
+<!-- .site-wrap -->
 
-  </div>
-  <!-- .site-wrap -->
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
 
 
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 
