@@ -47,66 +47,7 @@
 
   <body>
     <div class="site-wrap">
-      <div class="site-mobile-menu site-navbar-target">
-        <div class="site-mobile-menu-header">
-          <div class="site-mobile-menu-close">
-            <span class="icon-close2 js-menu-toggle"></span>
-          </div>
-        </div>
-        <div class="site-mobile-menu-body"></div>
-      </div>
-
-      <header class="site-navbar py-4" role="banner">
-        <div class="container">
-          <div class="d-flex align-items-center">
-            <div class="site-logo">
-              <a href="index.html">
-                <img
-                  src="{% static 'images/edit/logo/MLB_Logo.svg' %}"
-                  alt="Logo"
-                  id="logo_img"
-                />
-              </a>
-            </div>
-            <div class="ml-auto">
-              <nav
-                class="site-navigation position-relative text-right"
-                role="navigation"
-              >
-                <ul
-                  class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"
-                >
-                  <li><a href="index.html" class="nav-link">Home</a></li>
-                  <li class="active">
-                    <a href="matches.html" class="nav-link">Matches</a>
-                  </li>
-                  <li>
-                    <a href="virtualMatch.html" class="nav-link"
-                      >Virtual Match</a
-                    >
-                  </li>
-                  <li><a href="board.html" class="nav-link">Board</a></li>
-                  <!-- 로그인 안 된 경우 Sign in 버튼이 보이도록, 로그인 후 는 UserInfo 버튼으로 보이도록 설정  -->
-                  <!-- {% if user.is_authenticated %} -->
-                  <li>
-                    <a href="user_info.html" class="nav-link">UserInfo</a>
-                  </li>
-                  <!-- {% else %} -->
-                  <li><a href="login.html" class="nav-link">Sign in</a></li>
-                  <!-- {% endif %} -->
-                </ul>
-              </nav>
-
-              <a
-                href="#"
-                class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right text-white"
-                ><span class="icon-menu h3 text-white"></span
-              ></a>
-            </div>
-          </div>
-        </div>
-      </header>
-
+      {% include 'module/page_header.html' %}
       <div
         class="hero overlay"
         style="background-image: url({% static 'images/bg_3.jpg' %}')"
