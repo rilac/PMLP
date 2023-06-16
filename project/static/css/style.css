@@ -907,6 +907,7 @@ h5,
 .hero>.container>.row {
   height: 100vh;
   min-height: 500px;
+  justify-content: center;
 }
 
 .hero.overlay:before {
