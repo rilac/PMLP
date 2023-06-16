@@ -27,7 +27,6 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-static/
 
 /project/board/migrations/
 /project/home/migrations/
