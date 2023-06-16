@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Custom
+misc.xml
+pmlp.iml
+
 
 # C extensions
 *.so
