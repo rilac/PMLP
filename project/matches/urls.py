@@ -6,4 +6,5 @@ app_name = 'matches'
 
 urlpatterns = [
     path('', views.matches),
+    path('selectteam', views.selectteam)
 ]
