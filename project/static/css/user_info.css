@@ -16,7 +16,7 @@ body{
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
-#loginCard{
+#user-info-Card {
     width:500px;
     height:auto;
     background-color:#fff;

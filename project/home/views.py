@@ -10,4 +10,4 @@ def signin(request):
 
 
 def userinfo(request):
-    return render(request, 'sign/user_info.html')
+    return render(request, '../templates/sign/user_info.html')
