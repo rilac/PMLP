@@ -7,3 +7,7 @@ def home (request):
 
 def signin(request):
     return render(request, '../templates/sign/login.html')
+
+
+def userinfo(request):
+    return render(request, 'sign/user_info.html')

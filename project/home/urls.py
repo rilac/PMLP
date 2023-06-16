@@ -11,5 +11,6 @@ urlpatterns = [
     path('board/', include('board.urls')),
     path('signin/', views.signin),
     path('signup/', include('user.urls')),
+    path('userinfo/', views.userinfo),
 ]
 

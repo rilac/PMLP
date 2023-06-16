@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate
 
+
 # Create your views here.
 
 def signup(request):
     return render(request, '../templates/sign/signup.html')
+
 
 def login(request):
     # 이런 식으로 코딩하면 되겠다이지 여기에 맞추는 건 아닙니다.
