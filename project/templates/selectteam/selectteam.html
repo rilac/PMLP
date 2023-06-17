@@ -34,15 +34,35 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <style>
-        .dropdown-submenu {
-            position: relative;
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
-        .dropdown-submenu .dropdown-menu {
-            top: 0;
-            left: 100%;
-            margin-top: -1px;
-        }
+        /*main {*/
+        /*    background-color: #a6ae24;*/
+        /*    margin: 0 auto;*/
+        /*    padding: 20px 0 20px 0; !* top right bottom left *!*/
+        /*    width: 1000px;*/
+        /*    height: 400px;*/
+        /*}*/
+
+        /*#box1 {*/
+        /*    background-color: #ff8000;*/
+        /*    width: 500px;*/
+        /*    height: 350px;*/
+        /*    float: left;*/
+        /*}*/
+
+        /*#box2 {*/
+        /*    background-color: #be81f7;*/
+        /*    width: 500px;*/
+        /*    height: 350px;*/
+        /*    float: left;*/
+        /*}*/
+
     </style>
 
 </head>
@@ -51,66 +71,264 @@
         class="hero overlay"
         style="background-image: url('{% static 'images/bg_3.jpg' %}')"
 >
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 mx-auto text-center">
-                <h1 class="text-white">Matches</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Soluta, molestias repudiandae pariatur.
-                </p>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Select a Team
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <input class="dropdown-search form-control" type="text" placeholder="Search">
-                        <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">American League</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Baltimore Orioles</a>
-                                <a class="dropdown-item" href="#">Boston Red Sox</a>
-                                <a class="dropdown-item" href="#">Chicago White Sox</a>
-                                <a class="dropdown-item" href="#">Cleveland Guardians</a>
-                                <a class="dropdown-item" href="#">Detroit Tigers</a>
-                                <a class="dropdown-item" href="#">Houston Astros</a>
-                                <a class="dropdown-item" href="#">Kansas City Royals</a>
-                                <a class="dropdown-item" href="#">Los Angeles Angels</a>
-                                <a class="dropdown-item" href="#">Minnesota Twins</a>
-                                <a class="dropdown-item" href="#">New York Yankees</a>
-                                <a class="dropdown-item" href="#">Oakland Athletics</a>
-                                <a class="dropdown-item" href="#">Seattle Mariners</a>
-                                <a class="dropdown-item" href="#">Tampa Bay Rays</a>
-                                <a class="dropdown-item" href="#">Texas Rangers</a>
-                                <a class="dropdown-item" href="#">Toronto Blue Jays</a>
+
+    <header>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mx-auto text-center" style="margin-top: 30px; margin-bottom: 30px;">
+                    <h1 class="text-white">Matches</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Soluta, molestias repudiandae pariatur.
+                    </p>
+                    <div id="menu">
+                        <button
+                                class="btn btn-primary dropdown-toggle"
+                                type="button"
+                                id=""
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                        >
+                            Select a Team
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <div class="dropdown-submenu">
+                                <a class="dropdown-item1 dropdown-toggle" href="#"
+                                   style="padding-left: 24px;padding-right: 24px;padding-top: 4px;padding-bottom: 4px;">American
+                                    League</a
+                                >
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Baltimore Orioles', 'logo-1')">
+                                        <img src="{% static 'images/team/AmericanLeague/Baltimore Orioles.svg' %}"
+                                             style="display: none" id="logo-1" alt="Team Logo"/>
+                                        <input type="hidden" id="110"/>
+                                        Baltimore Orioles
+                                    </a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Boston Red Sox', 'logo-2')">
+                                        <img src="{% static 'images/team/AmericanLeague/Boston Red Sox.svg' %}"
+                                             style="display: none" id="logo-2" alt="Team Logo"/>
+                                        <input type="hidden" id="111"/>
+                                        Boston Red Sox
+                                    </a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Chicago White Sox', 'logo-3')">
+                                        <img src="{% static 'images/team/AmericanLeague/Chicago White Sox.svg' %}"
+                                             style="display: none" id="logo-3" alt="Team Logo"/>
+                                        <input type="hidden" id="145"/>
+                                        Chicago White Sox</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Cleveland Guardians', 'logo-4')">
+                                        <img src="{% static 'images/team/AmericanLeague/Cleveland Guardians.svg' %}"
+                                             style="display: none" id="logo-4" alt="Team Logo"/>
+                                        <input type="hidden" id="114"/>
+                                        Cleveland Guardians</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Detroit Tigers', 'logo-5')">
+                                        <img src="{% static 'images/team/AmericanLeague/Detroit Tigers.svg' %}"
+                                             style="display: none" id="logo-5" alt="Team Logo"/>
+                                        <input type="hidden" id="116"/>
+                                        Detroit Tigers</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Houston Astros', 'logo-6')">
+                                        <img src="{% static 'images/team/AmericanLeague/Houston Astros.svg' %}"
+                                             style="display: none" id="logo-6" alt="Team Logo"/>
+                                        <input type="hidden" id="117"/>
+                                        Houston Astros</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Kansas City Royals', 'logo-7')">
+                                        <img src="{% static 'images/team/AmericanLeague/Kansas City Royals.svg' %}"
+                                             style="display: none" id="logo-7" alt="Team Logo"/>
+                                        <input type="hidden" id="118"/>
+                                        Kansas City Royals</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Los Angeles Angels', 'logo-8')">
+                                        <img src="{% static 'images/team/AmericanLeague/Los Angeles Angels.svg' %}"
+                                             style="display: none" id="logo-8" alt="Team Logo"/>
+                                        <input type="hidden" id="108"/>
+                                        Los Angeles Angels</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Minnesota Twins', 'logo-9')">
+                                        <img src="{% static 'images/team/AmericanLeague/Minnesota Twins.svg' %}"
+                                             style="display: none" id="logo-9" alt="Team Logo"/>
+                                        <input type="hidden" id="142"/>
+                                        Minnesota Twins</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('New York Yankees', 'logo-10')">
+                                        <img src="{% static 'images/team/AmericanLeague/New York Yankees.svg' %}"
+                                             style="display: none" id="logo-10" alt="Team Logo"/>
+                                        <input type="hidden" id="147"/>
+                                        New York Yankees</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Oakland Athletics', 'logo-11')">
+                                        <img src="{% static 'images/team/AmericanLeague/Oakland Athletics.svg' %}"
+                                             style="display: none" id="logo-11" alt="Team Logo"/>
+                                        <input type="hidden" id="133"/>
+                                        Oakland Athletics</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Seattle Mariners', 'logo-12')">
+                                        <img src="{% static 'images/team/AmericanLeague/Seattle Mariners.svg' %}"
+                                             style="display: none" id="logo-12" alt="Team Logo"/>
+                                        <input type="hidden" id="136"/>
+                                        Seattle Mariners</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Tampa Bay Rays', 'logo-13')">
+                                        <img src="{% static 'images/team/AmericanLeague/Tampa Bay Rays.svg' %}"
+                                             style="display: none" id="logo-13" alt="Team Logo"/>
+                                        <input type="hidden" id="139"/>
+                                        Tampa Bay Rays</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Texas Rangers', 'logo-14')">
+                                        <img src="{% static 'images/team/AmericanLeague/Texas Rangers.svg' %}"
+                                             style="display: none" id="logo-14" alt="Team Logo"/>
+                                        <input type="hidden" id="140"/>
+                                        Texas Rangers</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Toronto Blue Jays', 'logo-15')">
+                                        <img src="{% static 'images/team/AmericanLeague/Toronto Blue Jays.svg' %}"
+                                             style="display: none" id="logo-15" alt="Team Logo"/>
+                                        <input type="hidden" id="141"/>
+                                        Toronto Blue Jays</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">National League</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Arizona Diamondbacks</a>
-                                <a class="dropdown-item" href="#">Atlanta Braves</a>
-                                <a class="dropdown-item" href="#">Chicago Cubs</a>
-                                <a class="dropdown-item" href="#">Cincinnati Reds</a>
-                                <a class="dropdown-item" href="#">Colorado Rockies</a>
-                                <a class="dropdown-item" href="#">Los Angeles Dodgers</a>
-                                <a class="dropdown-item" href="#">Miami Marlins</a>
-                                <a class="dropdown-item" href="#">Milwaukee Brewers</a>
-                                <a class="dropdown-item" href="#">New York Mets</a>
-                                <a class="dropdown-item" href="#">Philadelphia Phillies</a>
-                                <a class="dropdown-item" href="#">Pittsburgh Pirates</a>
-                                <a class="dropdown-item" href="#">San Diego Padres</a>
-                                <a class="dropdown-item" href="#">San Francisco Giants</a>
-                                <a class="dropdown-item" href="#">St. Louis Cardinals</a>
-                                <a class="dropdown-item" href="#">Washington Nationals</a>
+                            <div class="dropdown-submenu">
+                                <a class="dropdown-item2 dropdown-toggle" href="#"
+                                   style="padding-left: 24px;padding-right: 24px;padding-top: 4px;padding-bottom: 4px;">National
+                                    League</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Arizona Diamondbacks', 'logo-16')">
+                                        <img src="{% static 'images/team/NationalLeague/Arizona Diamondbacks.svg' %}"
+                                             style="display: none" id="logo-16" alt="Team Logo"/>
+                                        <input type="hidden" id="109"/>
+                                        Arizona Diamondbacks</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Atlanta Braves', 'logo-17')">
+                                        <img src="{% static 'images/team/NationalLeague/Atlanta Braves.svg' %}"
+                                             style="display: none" id="logo-17" alt="Team Logo"/>
+                                        <input type="hidden" id="144"/>
+                                        Atlanta Braves</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Chicago Cubs', 'logo-18')">
+                                        <img src="{% static 'images/team/NationalLeague/Chicago Cubs.svg' %}"
+                                             style="display: none" id="logo-18" alt="Team Logo"/>
+                                        <input type="hidden" id="112"/>
+                                        Chicago Cubs</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Cincinnati Reds', 'logo-19')">
+                                        <img src="{% static 'images/team/NationalLeague/Cincinnati Reds.svg' %}"
+                                             style="display: none" id="logo-19" alt="Team Logo"/>
+                                        <input type="hidden" id="113"/>
+                                        Cincinnati Reds</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Colorado Rockies', 'logo-20')">
+                                        <img src="{% static 'images/team/NationalLeague/Colorado Rockies.svg' %}"
+                                             style="display: none" id="logo-20" alt="Team Logo"/>
+                                        <input type="hidden" id="115"/>
+                                        Colorado Rockies</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Los Angeles Dodgers', 'logo-21')">
+                                        <img src="{% static 'images/team/NationalLeague/Los Angeles Dodgers.svg' %}"
+                                             style="display: none" id="logo-21" alt="Team Logo"/>
+                                        <input type="hidden" id="119"/>
+                                        Los Angeles Dodgers</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Miami Marlins', 'logo-22')">
+                                        <img src="{% static 'images/team/NationalLeague/Miami Marlins.svg' %}"
+                                             style="display: none" id="logo-22" alt="Team Logo"/>
+                                        <input type="hidden" id="146"/>
+                                        Miami Marlins</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Milwaukee Brewers', 'logo-23')">
+                                        <img src="{% static 'images/team/NationalLeague/Milwaukee Brewers.svg' %}"
+                                             style="display: none" id="logo-23" alt="Team Logo"/>
+                                        <input type="hidden" id="158"/>
+                                        Milwaukee Brewers</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('New York Mets', 'logo-24')">
+                                        <img src="{% static 'images/team/NationalLeague/New York Mets.svg' %}"
+                                             style="display: none" id="logo-24" alt="Team Logo"/>
+                                        <input type="hidden" id="121"/>
+                                        New York Mets</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Philadelphia Phillies', 'logo-25')">
+                                        <img src="{% static 'images/team/NationalLeague/Philadelphia Phillies.svg' %}"
+                                             style="display: none" id="logo-25" alt="Team Logo"/>
+                                        <input type="hidden" id="143"/>
+                                        Philadelphia Phillies</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Pittsburgh Pirates', 'logo-26')">
+                                        <img src="{% static 'images/team/NationalLeague/Pittsburgh Pirates.svg' %}"
+                                             style="display: none" id="logo-26" alt="Team Logo"/>
+                                        <input type="hidden" id="134"/>
+                                        Pittsburgh Pirates</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('San Diego Padres', 'logo-27')">
+                                        <img src="{% static 'images/team/NationalLeague/San Diego Padres.svg' %}"
+                                             style="display: none" id="logo-27" alt="Team Logo"/>
+                                        <input type="hidden" id="135"/>
+                                        San Diego Padres</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('San Francisco Giants', 'logo-28')">
+                                        <img src="{% static 'images/team/NationalLeague/San Francisco Giants.svg' %}"
+                                             style="display: none" id="logo-28" alt="Team Logo"/>
+                                        <input type="hidden" id="137"/>
+                                        San Francisco Giants</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('St. Louis Cardinals', 'logo-29')">
+                                        <img src="{% static 'images/team/NationalLeague/St. Louis Cardinals.svg' %}"
+                                             style="display: none" id="logo-29" alt="Team Logo"/>
+                                        <input type="hidden" id="138"/>
+                                        St. Louis Cardinals</a>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="selectTeam('Washington Nationals', 'logo-30')">
+                                        <img src="{% static 'images/team/NationalLeague/Washington Nationals.svg' %}"
+                                             style="display: none" id="logo-30" alt="Team Logo"/>
+                                        <input type="hidden" id="120"/>
+                                        Washington Nationals</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
+    <main class=""
+          style="width: 1000px; height: 500px; text-align: center; margin: auto;  flex-wrap: nowrap; flex-direction: column; justify-content: flex-end;">
+        <div style="display: inline-flex;">
+            <div class="" style="text-align: center;">
+                <div>
+                    <div class="col-lg-12" id="box1" style="color: azure;">
+                        <h3 id="selected-team-1"></h3>
+                        <button class="btn btn-danger btn-sm cancel-btn" id="cancel-team-1">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="{% static 'images/VS.png' %}" style="padding-top: 70px;"/>
+            </div>
+            <div class="" style="text-align: center;">
+                <div>
+                    <div class="col-lg-12" id="box2" style="color: azure;">
+                        <div>
+                            <h3 id="selected-team-2"></h3>
+                        </div>
+                        <button class="btn btn-danger btn-sm cancel-btn2" id="cancel-team-2">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="col-lg-5 mx-auto text-center" style="margin-top: 30px;">
+            <button class="btn btn-primary" type="submit" style="margin-top: 30px;margin-bottom: 50px;">Match Apply
+            </button>
+        </div>
+    </footer>
 </div>
 
 <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
@@ -129,43 +347,67 @@
 <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
 
 <script src="{% static 'js/main.js' %}"></script>
+
 <script>
 
 
     $(document).ready(function () {
-        $(".dropdown-search").on("keyup", function () {
-            var value = $(this).val().toLowerCase();
-            $(this)
-                .closest(".dropdown-menu")
-                .find(".dropdown-item")
-                .filter(function () {
-                    var text = $(this).text().toLowerCase();
-                    var isVisible = text.includes(value);
-                    $(this).toggle(isVisible);
-
-                    var hasVisibleItems = $(this)
-                        .closest(".dropdown-menu")
-                        .find(".dropdown-item:visible")
-                        .length > 0;
-                    $(this)
-                        .closest(".dropdown-submenu")
-                        .children(".dropdown-toggle")
-                        .toggle(hasVisibleItems);
-                });
-        });
-
         $(".dropdown-submenu a.dropdown-toggle").on("click", function (e) {
-            $(this).next("div.dropdown-menu").toggle();
+            $(this).next("div").toggle();
             e.stopPropagation();
             e.preventDefault();
         });
+
+        // $(".dropdown-menu a.dropdown-item").on("click", function (e) {
+        //     e.preventDefault();
+        //     var selectedTeam = $(this).text();
+        //
+        //     if ($("#selected-team-1").text() === "") {
+        //         $("#selected-team-1").text(selectedTeam);
+        //     } else if ($("#selected-team-2").text() === "") {
+        //         $("#selected-team-2").text(selectedTeam);
+        //     }
+        //
+        //     $(this).closest(".dropdown").removeClass("show");
+        // });
     });
 
-    function showPopup() {
-        window.open("selectteam", "팀 선택", "width=400, height=300, left=100, top=50");
+    $(document).ready(function () {
+        $("#cancel-team-1").on("click", function () {
+            $("#selected-team-1").text("");
+            $(".cancel-btn").hide();
+        });
+        $("#cancel-team-2").on("click", function () {
+            $("#selected-team-2").text("");
+            $(".cancel-btn2").hide();
+        });
+    });
+
+
+    // $(document).ready(function () {
+    //     $(".dropdown-menu a.dropdown-item").on("click", function (e) {
+    //         e.preventDefault();
+    //         var selectedTeam = $(this).text();
+    //         $("#selected-team").html(selectedTeam);
+    //         $(this).closest(".dropdown").removeClass("show");
+    //     });
+    // });
+
+    $(".cancel-btn").hide();
+    $(".cancel-btn2").hide();
+
+    function selectTeam(teamName, logoId) {
+        var selectedLogo = document.getElementById(logoId).src;
+        var teamHtml = `<img src="${selectedLogo}" alt="Team Logo"> <p style="text-align: center"> ${teamName} </p>`;
+
+        if ($("#selected-team-1").text() === "") {
+            $("#selected-team-1").html(teamHtml);
+            $("#cancel-team-1").show();
+        } else if ($("#selected-team-2").text() === "") {
+            $("#selected-team-2").html(teamHtml);
+            $("#cancel-team-2").show();
+        }
     }
-
-
 </script>
 </body>
 </html>
