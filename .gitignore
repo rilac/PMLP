@@ -35,12 +35,12 @@ MANIFEST
 /project/board/migrations/
 /project/home/migrations/
 /project/matches/migrations/
-/project/user/migrations/
+/project/memberlist/migrations/
 /project/virtualmatch/migrations/
 /project/board/__init__.py
 /project/home/__init__.py
 /project/matches/__init__.py
-/project/user/__init__.py
+/project/memberlist/__init__.py
 /project/virtualmatch/__init__.py
 
 
